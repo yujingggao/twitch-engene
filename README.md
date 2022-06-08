@@ -49,7 +49,7 @@ Open the `first` folder In the ItelliJ IDE, and add Apache Tomcat as a Run/Debug
 - Click `OK` to apply and save all changes
 
 ### Database
-This project is using RDS MySQL engene from AWS.  If you'd like to connect to another database, the following code in ` ` needs to be modified
+This project is using RDS MySQL engene from AWS.  You would need to connect to your own database.
 
 
 ## Start the Backend Server
