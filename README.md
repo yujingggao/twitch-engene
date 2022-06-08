@@ -3,14 +3,27 @@ Web app that allows users to search and get recommendation for twitch resources 
 
 <img src="frontend/public/twitch_engene.png" width="800" >
 
-# Requirements
+## Tech stack
+- Frontend: Javascript React, Ant Design
+- Backend: Java Spring, Hibernate
+- REST API: Twitch(get-top-games, get-games)
+- Cloud: AWS EC2, RDS(MySQL Engene)
+
+## Feature
+1. Browse all popular games and view the resources of each game
+2. Recommend resources based on search history
+3. Favorite/remove records and save into user list
+4. Session-based authentication
+
+## Requirements
 The following instruction applies to Linux/MacOS development environment.
 
-## ItelliJ Ultimate IDE
+### ItelliJ Ultimate IDE
 - Download and install the latest IntelliJ IDEA Ultimate from [here](http://jetbrains.com/idea/download). 
 - Choose the Ultimate version (>=2020.02).
 - Refer to [Installation Guide](https://www.jetbrains.com/help/idea/run-for-the-first-time.html)to perform the initial setup
-## Apache Tomcat
+
+### Apache Tomcat
 - Open [this page](http://tomcat.apache.org/download-90.cgi), and select the binary based on your US under the `Core` section
 	- Mac: tar.gz
 	- Windows: 64-bit Windows zip
@@ -18,11 +31,11 @@ The following instruction applies to Linux/MacOS development environment.
 ```shell
 >$ chmod 755 bin/catalina.sh
 ```
-## Java
+### Java
 - Download Java 8 or higher from [here](https://www.oracle.com/java/technologies/downloads/#java8)
 
-# Backend Configuration
-## Apache Tomcat
+## Backend Configuration
+### Apache Tomcat
 Open the `first` folder In the ItelliJ IDE, and add Apache Tomcat as a Run/Debug configuration, so that the IDE knows how to run the program.  
 - On top right of the IDE, click `Add Configuration...`
 - In the new window, select `Add new` - `Tomcat Server` - `Local`
@@ -35,7 +48,7 @@ Open the `first` folder In the ItelliJ IDE, and add Apache Tomcat as a Run/Debug
 - Under the deployment tab, change the application context to `/`
 - Click `OK` to apply and save all changes
 
-## Database
+### Database
 This project is using RDS MySQL engene from AWS.  If you'd like to connect to another database, the following code in ` ` needs to be modified
 
 
