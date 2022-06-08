@@ -98,6 +98,7 @@ Remove the `index.jsp` file in the `webapp` folder, and update the file `first-s
    <context:component-scan base-package="com.project.first" />
 </beans>
 ```
+
 ### Build the backend
 Open the `first` folder in IntelliJ
 - On the tab of the right side of the IDE, find the `Maven` tab
@@ -109,12 +110,14 @@ A `target` folder will be generated.  Underneath it find a file called `first-1.
 ## Deployment
 We are deploying this project to AWS EC2.  See [EC2 documentation](https://docs.aws.amazon.com/ec2/index.html) for information on how to set up and launch an instance
 
+
 ### Connect to EC2
 After an EC2 instance is set up and launched, you should have the `public IP address` of your instance downloaded a `key pair` file (.pem) downloaded from AWS. `cd` into where you store your key pair file, and run the following command in your terminal/git bash to ssh into your instance
 ```shell
 >$ chmod 600 <YOUR_PRIVATE_KEY_NAME>
 >$ ssh -i <YOUR_PRIVATE_KEY_NAME> ubuntu@<YOUR_INSTANCE_IP>
 ```
+
 
 ### Set up Docker
 We will use docker to handle Linux containers on EC2.  
@@ -142,11 +145,13 @@ Run the following command to verify if Docker is installed correctly
 >$ sudo docker run hello-world
 ```
 
+
 ### Upload the build 
 Open a new terminal/git bash window, `cd` into where your pair key is stored and execute the following command.  
 ```shell
 >$ scp -i <YOUR_PRIVATE_KEY_NAME>  <FIRST_WAR_LOCATION>/first.war ubuntu@<YOUR_INSTANCE_IP>:~/
 ```
+
 
 ### Build a Docker Image
 Go back to the terminal/git bash window that is SSH’ed to your EC2 instance, create a new file called Dockerfile
@@ -174,6 +179,7 @@ To run your image locally
 ```
 
 Now the project should be deployed successfully to your EC2 instance!  use `http://<YOUR_INSTANCE_IP>` to test your service
+
 
 ### Some useful commands to manipulate Docker
 Check existing images
